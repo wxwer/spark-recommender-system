@@ -1,0 +1,71 @@
+2021-01-29 11:58:05,158 - INFO - app - retrieve_rank - 27 - userId=32 retrieves items
+2021-01-29 11:58:39,468 - INFO - app - retrieve_rank - 27 - userId=32 retrieves items
+2021-01-29 15:35:01,383 - INFO - app - retrieve_rank - 27 - userId=32 retrieves items
+2021-01-29 21:32:39,388 - INFO - app - retrieve_rank - 27 - userId=32 retrieves items
+2021-01-29 21:33:29,399 - INFO - app - retrieve_rank - 27 - userId=31 retrieves items
+2021-01-29 21:37:11,445 - INFO - app - retrieve_rank - 27 - userId=31 retrieves items
+2021-01-29 21:40:13,672 - INFO - app - retrieve_rank - 27 - userId=31 retrieves items
+2021-01-29 21:40:23,732 - INFO - app - retrieve_rank - 27 - userId=1 retrieves items
+2021-01-29 21:42:27,953 - INFO - app - retrieve_rank - 28 - userId=1 retrieves items
+2021-01-29 21:43:06,432 - INFO - app - retrieve_rank - 28 - userId=1 retrieves items
+2021-01-29 21:54:08,279 - INFO - app - retrieve_rank - 28 - userId=1 retrieves items
+2021-01-29 21:54:29,185 - INFO - app - retrieve_rank - 28 - userId=1 retrieves items
+2021-01-29 21:58:39,568 - INFO - app - retrieve_rank - 28 - userId=1 retrieves items
+2021-01-30 12:05:43,418 - INFO - app - retrieve_rank - 28 - userId=1 retrieves items
+2021-01-30 12:06:51,246 - INFO - app - retrieve_rank - 28 - userId=1 retrieves items
+2021-01-30 12:07:36,870 - INFO - app - retrieve_rank - 28 - userId=1 retrieves items
+2021-01-30 12:11:05,891 - INFO - app - retrieve_rank - 28 - userId=1 retrieves items
+2021-01-30 12:18:36,570 - INFO - app - retrieve_rank - 28 - userId=1 retrieves items
+2021-01-30 12:19:06,272 - INFO - app - retrieve_rank - 28 - userId=1 retrieves items
+2021-01-30 17:24:02,242 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 18:09:42,528 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 18:09:43,637 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 18:17:34,892 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 18:17:35,348 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 18:20:02,864 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 18:24:05,529 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 18:24:19,583 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 18:24:20,231 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 18:26:54,511 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 18:26:55,203 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 18:29:33,759 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 18:29:34,431 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 18:30:49,258 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 18:30:49,885 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 18:31:27,428 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 18:33:10,433 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 18:34:03,027 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 18:34:03,625 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 18:34:59,581 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 18:35:00,205 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 18:35:03,597 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 21:59:04,683 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 21:59:05,281 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 22:03:56,343 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 22:03:56,837 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 22:04:25,152 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:04:31,556 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 22:04:31,983 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 22:05:43,232 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 22:05:43,746 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 22:06:21,585 - INFO - app - retrieve_rank - 29 - userId=None retrieves items
+2021-01-31 22:06:22,153 - ERROR - app - retrieve_rank - 40 - $and/$or/$nor must be a nonempty array, full error: {'ok': 0.0, 'errmsg': '$and/$or/$nor must be a nonempty array', 'code': 2, 'codeName': 'BadValue'}
+2021-01-31 22:13:25,155 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:14:46,795 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:14:58,546 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:21:14,217 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:34:27,989 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:34:53,118 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:37:40,877 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:40:05,573 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:41:41,879 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:41:54,942 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:48:12,996 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:48:21,441 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:48:27,715 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-01-31 22:51:32,958 - INFO - app - retrieve_rank - 29 - userId=32 retrieves items
+2021-01-31 22:51:33,737 - ERROR - app - retrieve_rank - 40 - '>' not supported between instances of 'int' and 'NoneType'
+2021-01-31 23:04:46,730 - INFO - app - retrieve_rank - 29 - userId=2 retrieves items
+2021-01-31 23:04:54,283 - INFO - app - retrieve_rank - 29 - userId=2 retrieves items
+2021-01-31 23:04:56,591 - INFO - app - retrieve_rank - 29 - userId=2 retrieves items
+2021-01-31 23:04:58,671 - INFO - app - retrieve_rank - 29 - userId=2 retrieves items

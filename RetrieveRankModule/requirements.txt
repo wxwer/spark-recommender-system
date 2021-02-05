@@ -1,0 +1,8 @@
+tensorflow
+kereas
+deepctr
+sklearn
+pandas
+numpy
+flask
+flask_pymongo
