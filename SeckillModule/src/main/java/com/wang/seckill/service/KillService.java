@@ -96,7 +96,7 @@ public class KillService{
 				//System.out.println("时效性满足");
 				//2. 验证商品和商品随机码是否对应，是否有库存
 				String redisKey = redisTo.getSessionId()+"-"+redisTo.getGoodsId();
-				RSemaphore semaphore = redissonClient.getSemaphore(Constants.GOODS_STOCK_SEMAPHORE + redisTo.getRandomCode());
+				RSemaphore semaphore = redissonClient.getSemaphore(Constants.GOODS_STOCK_SEMAPHORE + redisTo.getSessionId() +"-"+ redisTo.getGoodsId());
 				if(redisKey.equals(killId) && code.equals(redisTo.getRandomCode()) && semaphore.availablePermits()>=num) {
 					//System.out.println("随机码满足");
 					//3. 验证当前用户是否购买过

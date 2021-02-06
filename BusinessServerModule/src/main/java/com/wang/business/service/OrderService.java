@@ -47,7 +47,7 @@ public class OrderService {
 			commodityOrderMapper.insert(order);
 		} catch (Exception e) {
 			if(jedis.exists(Constant.SECKILL_CHARE_PREFIX+orderVo.getSessionId()+"-"+orderVo.getGoodsId())) {
-				String semaphoreKey = Constant.GOODS_STOCK_SEMAPHORE + orderVo.getCode();
+				String semaphoreKey = Constant.GOODS_STOCK_SEMAPHORE + orderVo.getSessionId() +"-"+ orderVo.getGoodsId();
 				RSemaphore semaphore = redissonClient.getSemaphore(semaphoreKey);
 				semaphore.release();
 				jedis.del(Constant.USER_GOODS_OCCUPY+order.getUserId()+"-"+order.getGoodsId());
@@ -69,13 +69,13 @@ public class OrderService {
 	}
 	//取消订单，使用事务保证原子性，同时恢复信号值
 	@Transactional(rollbackFor = Exception.class)
-	public boolean cancelOder(Integer id,String code) {
+	public boolean cancelOder(Integer id) {
 		try {
 			CommodityOrder order = commodityOrderMapper.selectById(id);
 			sessionMapper.increStockById(order.getSessionId(), order.getGoodsId());
 			commodityOrderMapper.deleteOrder(id);
 			if(jedis.exists(Constant.SECKILL_CHARE_PREFIX+order.getSessionId()+"-"+order.getGoodsId())) {
-				String semaphoreKey = Constant.GOODS_STOCK_SEMAPHORE + code;
+				String semaphoreKey = Constant.GOODS_STOCK_SEMAPHORE + order.getSessionId() +"-"+ order.getGoodsId();
 				RSemaphore semaphore = redissonClient.getSemaphore(semaphoreKey);
 				semaphore.release();
 				jedis.del(Constant.USER_GOODS_OCCUPY+order.getUserId()+"-"+order.getGoodsId());

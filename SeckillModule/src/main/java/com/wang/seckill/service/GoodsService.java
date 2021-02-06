@@ -124,7 +124,7 @@ public class GoodsService extends ServiceImpl<GoodsMapper, Goods>{
                 Long ttl = session.getEndTime() - (Long)(System.currentTimeMillis()/1000);
                 ops.set(jsonString, ttl, TimeUnit.SECONDS);
                 //6. 使用库存作为Redisson信号量限制库存
-                RSemaphore semaphore = redissonClient.getSemaphore(Constants.GOODS_STOCK_SEMAPHORE + code);
+                RSemaphore semaphore = redissonClient.getSemaphore(Constants.GOODS_STOCK_SEMAPHORE + sku.getSessionId() +"-"+ sku.getGoodsId());
                 semaphore.trySetPermits(sku.getStock());
                 semaphore.expire(ttl, TimeUnit.SECONDS);
             });

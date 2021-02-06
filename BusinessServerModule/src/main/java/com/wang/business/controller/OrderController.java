@@ -53,13 +53,12 @@ public class OrderController {
     /**
      * 取消订单
      * @param id 订单id
-     * @param code 商品码
      * @return 返回通知
      */
     @GetMapping("/cancelOrder")
-    public R cancelOrder(@RequestParam("id") Integer id,@RequestParam("code") String code) {
+    public R cancelOrder(@RequestParam("id") Integer id) {
     	try {
-			return R.ok(orderService.cancelOder(id,code));
+			return R.ok(orderService.cancelOder(id));
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
