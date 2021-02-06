@@ -69,3 +69,10 @@
 2021-01-31 23:04:54,283 - INFO - app - retrieve_rank - 29 - userId=2 retrieves items
 2021-01-31 23:04:56,591 - INFO - app - retrieve_rank - 29 - userId=2 retrieves items
 2021-01-31 23:04:58,671 - INFO - app - retrieve_rank - 29 - userId=2 retrieves items
+2021-02-06 12:00:41,033 - INFO - app - retrieve_rank - 29 - userId=2 retrieves items
+2021-02-06 12:00:41,152 - ERROR - app - retrieve_rank - 40 - 'Config' object has no attribute 'feature_columns_file'
+2021-02-06 12:01:34,751 - INFO - app - retrieve_rank - 29 - userId=2 retrieves items
+2021-02-06 12:01:34,752 - ERROR - app - retrieve_rank - 40 - 'Config' object has no attribute 'feat_sizes'
+2021-02-06 12:01:52,323 - INFO - app - retrieve_rank - 29 - userId=2 retrieves items
+2021-02-06 12:02:00,966 - INFO - app - retrieve_rank - 29 - userId=1 retrieves items
+2021-02-06 12:02:07,856 - INFO - app - retrieve_rank - 29 - userId=3 retrieves items

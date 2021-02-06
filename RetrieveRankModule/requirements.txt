@@ -1,6 +1,4 @@
-tensorflow
-kereas
-deepctr
+torch
 sklearn
 pandas
 numpy

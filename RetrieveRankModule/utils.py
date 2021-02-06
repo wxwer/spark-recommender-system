@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
 
-from deepctr.models import DeepFM
+from deepFM_model.deepfm import Deepfm
 import pickle
 import numpy as np
 import logging
+import torch
+from config import Config
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -21,11 +23,20 @@ logger.addHandler(handler)
 @return
     model:加载后的模型
 '''
-def load_model(feature_columns_file,checkpoint_file):
-    with open(feature_columns_file,'rb') as f:
-        fixed_feature_columns=pickle.load(f)
-    model = DeepFM(fixed_feature_columns, fixed_feature_columns, task='binary',l2_reg_embedding=1e-5)
-    model.load_weights(checkpoint_file)
+def load_model(feat_sizes_file,checkpoint_file,use_cuda = False):
+    with open(feat_sizes_file,'rb') as f:
+        feat_sizes=pickle.load(f)
+    sparse_features = ["uid", "mid","gender", "occp",'genre']
+    dense_features = ["age"]
+    if use_cuda and torch.cuda.is_available():
+        print('cuda ready...')
+        device = 'cuda:0'
+    else:
+        device = 'cpu'
+    model = Deepfm(feat_sizes ,sparse_feature_columns = sparse_features,dense_feature_columns = dense_features,
+                   dnn_hidden_units=[400,400,400] , dnn_dropout=0.3 , ebedding_size = 8 ,
+                   l2_reg_linear=1e-3, device=device)
+    model.load_state_dict(torch.load(checkpoint_file))
     return model
 '''
 使用训练后的模型进行综合排序
@@ -84,13 +95,13 @@ def create_pred_input(mongo,userId,item_ids):
     pred_input={'uid':np.array(uid_list),'mid': np.array(mid_list),'gender': np.array(gender_list),
                   'occp': np.array(occp_list),'genre': np.array(genre_list),'age': np.array(age_list)}
     for feat in sparse_features:
-        with open('./model/'+feat+'_label_encoder.pkl','rb') as f:
+        with open('./weights/'+feat+'_label_encoder.pkl','rb') as f:
             lbe=pickle.load(f)
             pred_input[feat] = lbe.fit_transform(pred_input[feat])
     return pred_input
-
 '''
-model=load_model(cfg.feature_columns_file,cfg.checkpoint_file)
+cfg=Config()
+model=load_model(cfg.feat_sizes_file,cfg.checkpoint_file)
 pred_model_input={'uid':np.array([545]),'mid': np.array([221]),'gender': np.array([1]),
                       'occp': np.array([6]),'genre': np.array([1]),'age': np.array([20])}
 pred_res=model.predict(pred_model_input)

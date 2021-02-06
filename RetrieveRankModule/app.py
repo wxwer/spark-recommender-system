@@ -24,12 +24,10 @@ mongo=PyMongo(app)
 @app.route('/retrieve',methods = ['GET'])
 def retrieve_rank():
     try:
-        logger.info(str(request))
-        logger.info(str(request.args))
         userId=request.args.get("userId",type=int)
         count=request.args.get("count",type=int)
         logger.info("userId=%s retrieves items"%userId)
-        model=load_model(cfg.feature_columns_file,cfg.checkpoint_file)
+        model=load_model(cfg.feat_sizes_file,cfg.checkpoint_file)
         item_ids=retrieve_mutiPathItems(mongo,cfg,userId)
         pred_input=create_pred_input(mongo,userId,item_ids)
         rank_items=predict_rank(model,pred_input,count)
