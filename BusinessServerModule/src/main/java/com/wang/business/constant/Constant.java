@@ -61,4 +61,6 @@ public class Constant {
 	public static final String GOODS_STOCK_SEMAPHORE = "seckill:stock:";    
 	//上架商品时的分布式锁前缀
 	public static final String UPLOAD_SCHEDULE_SEMAPHORE = "seckill:schedule:upload";
+	//用户购买过后占位key前缀
+	public static final String USER_GOODS_OCCUPY = "seckill:occupy:";
 }

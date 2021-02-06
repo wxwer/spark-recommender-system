@@ -1,4 +1,4 @@
-基于spark实现的推荐系统，包含推荐引擎（RecommenderModule）、web后端（BusinessServerModule）、召回排序（RetrieveRankModule）、秒杀服务（SecKillModule）四个模块，每个模块都会与其他模块进行交互，相互配合，相互影响，一起完成认证、推荐、秒杀、管理等功能。使用到的技术主要有springboot、spark、各种推荐算法、redis、kafka、mysql、mongoDB、deepFM、flask、redisson等等。。  
+基于spark实现的推荐系统，包含推荐引擎（RecommenderModule）、web后端（BusinessServerModule）、召回排序（RetrieveRankModule）、秒杀服务（SecKillModule）四个模块，每个模块都会与其他模块进行交互，相互配合，一起完成认证、推荐、秒杀、管理等功能。使用到的技术主要有springboot、spark、各种推荐算法、redis、kafka、mysql、mongoDB、deepFM、flask、redisson等等。。  
   
 1.RecommenderModule子项目是推荐引擎核心，由scala语言编写，使用spark来实现离线和实时计算。  
 1.1.基于spark-core和spark-sql实现了基于数据统计、基于内容、基于协同过滤、基于矩阵分解等离线计算及召回模块，这些模块用的是全量数据，反映用户的长期的兴趣偏好，计算结果会保存在mongoDB中。  

@@ -8,12 +8,14 @@ public class Constants {
 
     //K: 固定值SECKILL_CHARE_PREFIX
     //V: hash，k为sessionId+"-"+skuId，v为对应的商品信息SeckillSkuRedisTo
-	public static final String SECKILL_CHARE_PREFIX = "seckill:skus";
+	public static final String SECKILL_CHARE_PREFIX = "seckill:goods";
 
     //K: SKU_STOCK_SEMAPHORE+商品随机码
     //V: 秒杀的库存件数
 	public static final String GOODS_STOCK_SEMAPHORE = "seckill:stock:";    
 	//上架商品时的分布式锁前缀
 	public static final String UPLOAD_SCHEDULE_SEMAPHORE = "seckill:schedule:upload";
+	//用户购买过后占位key前缀
+	public static final String USER_GOODS_OCCUPY = "seckill:occupy:";
 	
 }

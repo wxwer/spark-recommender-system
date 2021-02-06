@@ -69,13 +69,14 @@ public class SecKillGoodsController {
 	}
 	/**
 	 * 根据商品id获取秒杀商品信息
+	 * @param sessionId 场次id
 	 * @param goodsId 商品id
 	 * @return 商品信息
 	 */
 	@GetMapping("/seckillGoodsInfo")
-	public R getSeckillGoodsInfo(@RequestParam("goodsId") Long goodsId) {
+	public R getSeckillGoodsInfo(@RequestParam("sessionId") Integer sessionId,@RequestParam("goodsId") Integer goodsId) {
 		try {
-			SessionGoodsRedisVo sessionGoods = killService.getSeckillGoodsInfo(goodsId);
+			SessionGoodsRedisVo sessionGoods = killService.getSeckillGoodsInfo(sessionId,goodsId);
 			return R.ok(sessionGoods);
 		} catch (Exception e) {
 			e.printStackTrace();

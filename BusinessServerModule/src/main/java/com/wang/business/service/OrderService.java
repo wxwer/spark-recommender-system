@@ -46,11 +46,11 @@ public class OrderService {
 			sessionMapper.deductStockById(orderVo.getSessionId(),orderVo.getGoodsId());
 			commodityOrderMapper.insert(order);
 		} catch (Exception e) {
-			String semaphoreKey = Constant.GOODS_STOCK_SEMAPHORE + orderVo.getCode();
-			if(jedis.exists(semaphoreKey)) {
+			if(jedis.exists(Constant.SECKILL_CHARE_PREFIX+orderVo.getSessionId()+"-"+orderVo.getGoodsId())) {
+				String semaphoreKey = Constant.GOODS_STOCK_SEMAPHORE + orderVo.getCode();
 				RSemaphore semaphore = redissonClient.getSemaphore(semaphoreKey);
 				semaphore.release();
-				jedis.del(order.getUserId()+"-"+order.getGoodsId());
+				jedis.del(Constant.USER_GOODS_OCCUPY+order.getUserId()+"-"+order.getGoodsId());
 			}
 			e.printStackTrace();
 			throw e;
@@ -74,11 +74,11 @@ public class OrderService {
 			CommodityOrder order = commodityOrderMapper.selectById(id);
 			sessionMapper.increStockById(order.getSessionId(), order.getGoodsId());
 			commodityOrderMapper.deleteOrder(id);
-			String semaphoreKey = Constant.GOODS_STOCK_SEMAPHORE + code;
-			if(jedis.exists(semaphoreKey)) {
+			if(jedis.exists(Constant.SECKILL_CHARE_PREFIX+order.getSessionId()+"-"+order.getGoodsId())) {
+				String semaphoreKey = Constant.GOODS_STOCK_SEMAPHORE + code;
 				RSemaphore semaphore = redissonClient.getSemaphore(semaphoreKey);
 				semaphore.release();
-				jedis.del(order.getUserId()+"-"+order.getGoodsId());
+				jedis.del(Constant.USER_GOODS_OCCUPY+order.getUserId()+"-"+order.getGoodsId());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
